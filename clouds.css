@@ -7,14 +7,15 @@ body {
     border: 0;
     padding: 0;
     height: 100vh;
-    background-color: #22212c;
+    background-color: #434150;
+    animation: bgPulse 15s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 .img {
     background-image: linear-gradient(to bottom,
             rgba(0, 0, 0, 0) 15%,
             rgba(0, 0, 0, 0.5)),
-        url("./clouds.png");
+        url("./clouds.png"); /* https://pxhere.com/en/photo/942173 */
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -38,5 +39,19 @@ body {
     100% {
         filter: blur(1.25rem) hue-rotate(77deg) brightness(0.5) saturate(55%);
         backdrop-filter: blur(1.25rem) hue-rotate(77deg) brightness(0.5) saturate(55%);
+    }
+}
+
+@keyframes bgPulse {
+    0% {
+        background-color: #434150;
+    }
+
+    50% {
+        background-color: #454a56;
+    }
+
+    100% {
+        background-color: #434150;
     }
 }
